@@ -1,0 +1,16 @@
+[
+{
+  "modid": "primate",
+  "name": "Into the Jungle",
+  "description": "A Primate Mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ExpensiveKoala", "Bastion14"],
+  "credits": "Bastion14 for the amazing models and the original concept",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
