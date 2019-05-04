@@ -1,8 +1,8 @@
-package com.expensivekoala.primate.client.init;
+package com.primate.client.init;
 
-import com.expensivekoala.primate.IntoTheJungle;
-import com.expensivekoala.primate.server.init.Items;
-import com.expensivekoala.primate.server.item.ItemBanana;
+import com.primate.IntoTheJungle;
+import com.primate.server.init.Items;
+import com.primate.server.item.ItemBanana;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;

@@ -1,4 +1,4 @@
-package com.expensivekoala.primate.server;
+package com.primate.server;
 
 public class ServerProxy {
     public void preInit() {

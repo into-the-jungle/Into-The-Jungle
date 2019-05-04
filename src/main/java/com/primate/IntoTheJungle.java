@@ -1,7 +1,7 @@
-package com.expensivekoala.primate;
+package com.primate;
 
-import com.expensivekoala.primate.server.ServerProxy;
-import com.expensivekoala.primate.server.init.Items;
+import com.primate.server.ServerProxy;
+import com.primate.server.init.Items;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static com.expensivekoala.primate.IntoTheJungle.*;
+import static com.primate.IntoTheJungle.*;
 
 @Mod(modid = MODID, name = NAME, version = VERSION, dependencies = DEPENDENCIES, acceptedMinecraftVersions = "[1.12]")
 public class IntoTheJungle {
@@ -21,8 +21,8 @@ public class IntoTheJungle {
     public static final String NAME = "Into the Jungle";
     public static final String DEPENDENCIES = "";
 
-    public static final String CLIENT_PROXY = "com.expensivekoala.primate.client.ClientProxy";
-    public static final String SERVER_PROXY = "com.expensivekoala.primate.server.ServerProxy";
+    public static final String CLIENT_PROXY = "com.primate.client.ClientProxy";
+    public static final String SERVER_PROXY = "com.primate.server.ServerProxy";
 
     public static final Logger LOGGER = LogManager.getLogger(MODID);
 

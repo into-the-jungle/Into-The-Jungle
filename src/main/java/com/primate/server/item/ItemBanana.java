@@ -1,15 +1,19 @@
-package com.expensivekoala.primate.server.item;
+package com.primate.server.item;
 
-import com.expensivekoala.primate.IntoTheJungle;
+import com.primate.IntoTheJungle;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
+import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.NonNullList;
+import net.minecraft.world.World;
 
 import java.util.Locale;
 
 public class ItemBanana extends ItemFood {
+    private static final String NBT_TIMER = "timer";
+    private static final int MAX_TIMER = 1_000_000;
     public ItemBanana() {
         super(0, false);
         setCreativeTab(IntoTheJungle.TAB);
@@ -33,6 +37,32 @@ public class ItemBanana extends ItemFood {
                 items.add(new ItemStack(this, 1, type.ordinal()));
             }
         }
+    }
+
+    @Override
+    public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
+        if(!stack.hasTagCompound()) {
+            stack.setTagCompound(new NBTTagCompound());
+            stack.getTagCompound().setInteger(NBT_TIMER, 0);
+        }
+        int meta = stack.getMetadata();
+        int timer = stack.getTagCompound().getInteger(NBT_TIMER);
+        if(timer >= MAX_TIMER) {
+            if(meta == 0) {
+                //UNRIPE -> RIPE
+                entityIn.replaceItemInInventory(itemSlot, new ItemStack(this, stack.getCount(), 1));
+            } else if (meta == 1) {
+                //RIPE -> OVERRIPE
+                entityIn.replaceItemInInventory(itemSlot, new ItemStack(this, stack.getCount(), 2));
+            }
+            timer = 0;
+        }
+        stack.getTagCompound().setInteger(NBT_TIMER, timer + 1);
+    }
+
+    @Override
+    public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
+        return oldStack.getItem() != newStack.getItem() || oldStack.getMetadata() != newStack.getMetadata();
     }
 
     @Override

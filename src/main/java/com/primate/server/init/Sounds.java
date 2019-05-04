@@ -1,15 +1,16 @@
-package com.expensivekoala.primate.server.init;
+package com.primate.server.init;
 
-import com.expensivekoala.primate.IntoTheJungle;
-import net.minecraft.block.Block;
+import com.primate.IntoTheJungle;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod.EventBusSubscriber(modid = IntoTheJungle.MODID)
-public class Blocks {
+public class Sounds {
+
     @SubscribeEvent
-    static void registerBlocks(final RegistryEvent.Register<Block> event) {
+    static void registerSounds(final RegistryEvent.Register<SoundEvent> event) {
 
     }
 }

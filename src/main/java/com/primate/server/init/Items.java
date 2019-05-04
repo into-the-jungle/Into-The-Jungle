@@ -1,7 +1,7 @@
-package com.expensivekoala.primate.server.init;
+package com.primate.server.init;
 
-import com.expensivekoala.primate.IntoTheJungle;
-import com.expensivekoala.primate.server.item.ItemBanana;
+import com.primate.IntoTheJungle;
+import com.primate.server.item.ItemBanana;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
