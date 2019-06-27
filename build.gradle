@@ -11,8 +11,8 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 
 version = "1.0"
-group = "com.primate" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "primate"
+group = "io.itj.primatecraft" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "primatecraft"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 compileJava {
