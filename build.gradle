@@ -25,8 +25,15 @@ minecraft {
     mappings = project.mcpVersion
 }
 
+repositories {
+    maven { url 'https://jitpack.io' }
+    mavenCentral()
+}
+
 dependencies {
 
+    compile group: 'com.github.yooksi', name: 'commons', version:'v0.4.0-alpha'
+    compile group: 'com.github.yooksi', name: 'forgelib', version:'v0.1-pre-alpha'
 }
 
 processResources {
