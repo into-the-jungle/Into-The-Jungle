@@ -1,3 +1,3 @@
 # PrimateMod
 Primate Mod
-Hello! You stumbled upon a readme! 
+Hello there! You stumbled upon a readme!
